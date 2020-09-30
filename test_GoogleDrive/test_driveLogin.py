@@ -47,6 +47,7 @@ class TestGoogleDrive(BaseClass):
 
     def test_Login_to_Google_Doc(self):
         self.driver.get("https://drive.google.com")
+        self.driver.implicitly_wait(10)
         print(self.driver.title)
         self.driver.find_element_by_xpath("//header//div[3]//div[1]//a[1]").click()
         self.driver.switch_to.window(self.driver.window_handles[1])
@@ -78,6 +79,7 @@ class TestGoogleDrive(BaseClass):
 
     def test_Login_to_Google_slides(self):
         self.driver.get("https://drive.google.com")
+        self.driver.implicitly_wait(10)
         print(self.driver.title)
         self.driver.find_element_by_xpath("//header//div[3]//div[1]//a[1]").click()
         self.driver.switch_to.window(self.driver.window_handles[1])
@@ -106,6 +108,7 @@ class TestGoogleDrive(BaseClass):
 
     def test_Login_to_Google_createfolder(self):
         self.driver.get("https://drive.google.com")
+        self.driver.implicitly_wait(10)
         print(self.driver.title)
         self.driver.find_element_by_xpath("//header//div[3]//div[1]//a[1]").click()
         self.driver.switch_to.window(self.driver.window_handles[1])
@@ -123,3 +126,4 @@ class TestGoogleDrive(BaseClass):
         drive.create_folder("testcase7")
 
         time.sleep(5)
+        print
